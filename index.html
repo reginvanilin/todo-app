@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TODO LISTICK</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header-title">TODOS</h1>
+            <button class="header-button custom-button" id="createButton">
+                CREATE
+            </button>
+        </header>
+        <div class="todo-container" id="todoContainer"></div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2 class="close-title">CREATE TODO</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="form__group field">
+                        <input
+                            type="input"
+                            class="form__field"
+                            id="modal-input"
+                            name="modal-input"
+                            placeholder="WHAT YOU NEED TO DO?"
+                            required
+                        />
+                        <label class="form__label" for="modal-input"
+                            >WHAT YOU NEED TO DO?</label
+                        >
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-button" id="modalButton">CREATE</button>
+                </div>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
