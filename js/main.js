@@ -4,15 +4,16 @@ const closeButton = document.getElementsByClassName("close")[0];
 const createModalButton = document.getElementById("modalButton");
 const modalInput = document.getElementById("modal-input");
 const todoContainer = document.getElementById("todoContainer");
+const themeSwitcher = document.getElementById("slider");
 
-const savedTodos = localStorage.getItem('todos');
+const savedTodos = localStorage.getItem("todos");
 let todos = savedTodos ? JSON.parse(savedTodos) : [];
 
 const updateTodos = (newTodos) => {
     if (newTodos) todos = newTodos;
-    localStorage.setItem('todos', JSON.stringify(todos));
+    localStorage.setItem("todos", JSON.stringify(todos));
     renderTodos(todos);
-}
+};
 
 const deleteTodo = (id) => {
     const newTodos = todos.filter((todo) => todo.id !== id);
@@ -90,6 +91,28 @@ const closeTodoModal = () => {
     modalInput.value = "";
 };
 
+function setTheme(themeName) {
+    localStorage.setItem("theme", themeName);
+    document.documentElement.className = themeName;
+    if (themeName === "theme-light") themeSwitcher.checked = true;
+}
+
+function toggleTheme() {
+    if (localStorage.getItem("theme") === "theme-dark") {
+        setTheme("theme-light");
+    } else {
+        setTheme("theme-dark");
+    }
+}
+
+(function () {
+    if (localStorage.getItem("theme") === "theme-dark") {
+        setTheme("theme-dark");
+    } else {
+        setTheme("theme-light");
+    }
+})();
+
 openModalButton.onclick = () => {
     createTodoModal.style.display = "block";
 };
@@ -108,3 +131,5 @@ createModalButton.onclick = () => {
 modalInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") createTodo();
 });
+
+themeSwitcher.addEventListener("change", toggleTheme);
