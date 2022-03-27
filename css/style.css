@@ -71,6 +71,7 @@ body {
     flex-direction: column;
     background-color: var(--color-todo);
     width: 500px;
+    min-height: 230px;
     padding: 40px 40px;
     border-radius: 20px;
     transition: background-color 0.7s;
@@ -98,12 +99,14 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    word-break: break-all;
 }
 
 .todo-buttons {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    min-height: 50px;
 }
 .todo-buttons-done {
     border: 1px var(--font-color) solid;
