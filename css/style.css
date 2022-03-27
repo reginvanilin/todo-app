@@ -13,14 +13,14 @@
     --todo-completed: #e1bee7;
 }
 .theme-dark {
-    --color-primary: rgb(73, 73, 73);
-    --color-todo: #b1734a;
+    --color-primary: #444444;
+    --color-todo: #ebae5e;
     --font-color: #ffffff;
-    --todo-button-hover: rgb(83, 83, 47);
-    --header-bg-color: #747474;
-    --main-bg-color: gray;
-    --todo-hover-color: #745586;
-    --todo-completed: #979797;
+    --todo-button-hover: #272727;
+    --header-bg-color: #242424;
+    --main-bg-color: #383838;
+    --todo-hover-color: #bf84da;
+    --todo-completed: #B49FCE;
 }
 
 body {
@@ -278,7 +278,7 @@ body {
 
     border-width: 3px;
     /* вот туть */
-    border-image: linear-gradient(to right, var(--color-primary), #f5d488);
+    border-color: #ffe7ae;
     border-image-slice: 1;
 }
 
