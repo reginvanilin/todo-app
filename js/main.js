@@ -51,19 +51,15 @@ function renderTodos(todos) {
         const todoElement = `
         <div class="todo" id="todo${todo.id}">
             <h2 class="todo-title">${todo.title}</h2>
+            <div class="todo-buttons-delete" id="deleteButton${todo.id}"></div>
             <div class="todo-buttons">
                 <button
                     class="todo-buttons-done custom-button"
                     id="doneButton${todo.id}"
                 >
                     DONE
-                </button>
-                <button
-                    class="todo-buttons-delete custom-button"
-                    id="deleteButton${todo.id}"
-                >
-                    DELETE
-                </button>
+                </button>              	
+                
             </div>
         </div>
         `;
